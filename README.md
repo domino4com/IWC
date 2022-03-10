@@ -1,3 +1,5 @@
+<img src="assets/IWC.svg" width=200 align="right">
+
 # IWC - Input Weather C - Soil Moisture Sensor
 This is a Weather Sensor measuring Soil Moisture
 | Specifications | |
