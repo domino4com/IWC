@@ -8,6 +8,7 @@ This is a Weather Sensor measuring Soil Moisture
 | Type | [Capacitive](https://en.wikipedia.org/wiki/Capacitive_sensing) |
 | [CWS pin](https://github.com/domino4com/CWS) | T2 (GPIO2) |
 | [CWV pin](https://github.com/domino4com/CWV) | T8 (GPIO33) |
+| [CWB pin](https://github.com/domino4com/CWB) | N/A |
 
 ## Arduino Code Example
 ```c
