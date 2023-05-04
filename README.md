@@ -14,6 +14,19 @@ This is a Weather Sensor measuring Soil Moisture
 ```c
     int soilmoisture = map(touchRead(T2), 0, 25, 100, 0);
 ```
+
+## MicroPython Code Example
+```Python
+from machine import TouchPad, Pin
+import time
+
+touch_pin = TouchPad(Pin(2, mode=Pin.IN))
+while True:
+    touch_value = touch_pin.read()
+    print(touch_value)
+    time.sleep_ms(500)
+```
+
 ### Links
 - [map](https://www.arduino.cc/reference/en/language/functions/math/map/)
 - [touchRead](https://randomnerdtutorials.com/esp32-touch-pins-arduino-ide/)
