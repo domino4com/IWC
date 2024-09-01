@@ -6,13 +6,14 @@ This is a Weather Sensor measuring Soil Moisture
 | --: | :--: |
 | Communication | Analog |
 | Type | [Capacitive](https://en.wikipedia.org/wiki/Capacitive_sensing) |
-| [CWS pin](https://github.com/domino4com/CWS) | T2 (GPIO2) |
+| [CWA V1 pin](https://github.com/domino4com/CWA) | T2 (GPIO2) |
+| [CWA V2 pin](https://github.com/domino4com/CWA) | T1 (GPIO1) |
 | [CWV pin](https://github.com/domino4com/CWV) | T8 (GPIO33) |
 | [CWB pin](https://github.com/domino4com/CWB) | N/A |
 
 ## Arduino Code Example
 ```c
-    int soilmoisture = map(touchRead(T2), 0, 25, 100, 0);
+    int soilmoisture = map(touchRead(T1), 0, 25, 100, 0);
 ```
 
 ## MicroPython Code Example
@@ -20,7 +21,7 @@ This is a Weather Sensor measuring Soil Moisture
 from machine import TouchPad, Pin
 import time
 
-touch_pin = TouchPad(Pin(2, mode=Pin.IN))
+touch_pin = TouchPad(Pin(1, mode=Pin.IN))
 while True:
     touch_value = touch_pin.read()
     print(touch_value)
