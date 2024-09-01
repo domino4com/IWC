@@ -54,7 +54,7 @@ while True:
 ### Links
 - [map](https://www.arduino.cc/reference/en/language/functions/math/map/)
 - [touchRead](https://randomnerdtutorials.com/esp32-touch-pins-arduino-ide/)
-- [Espressif][https://docs.espressif.com/projects/arduino-esp32/en/latest/api/touch.html]
+- [Espressif](https://docs.espressif.com/projects/arduino-esp32/en/latest/api/touch.html)
 
 # License: 
 <img src="assets/CC-BY-NC-SA.png" width=200 align="right">
