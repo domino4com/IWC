@@ -8,15 +8,14 @@ This is a Weather Sensor measuring Soil Moisture
 | Type | [Capacitive](https://en.wikipedia.org/wiki/Capacitive_sensing) |
 | [CWA V1 pin](https://github.com/domino4com/CWA) | T2 (GPIO2) |
 | [CWA V2 pin](https://github.com/domino4com/CWA) | T1 (GPIO1) |
-| [CWV pin](https://github.com/domino4com/CWV) | T8 (GPIO33) |
-| [CWB pin](https://github.com/domino4com/CWB) | N/A |
+| [CWV V1-V4 pin](https://github.com/domino4com/CWV) | T8 (GPIO33) |
 
 ## Arduino Code Example
-###Generic, such as CWA v1 and CWV
+### Generic, such as CWA v1 and CWV
 ```c
     int soilmoisture = map(touchRead(T2), 0, 25, 100, 0);
 ```
-###CWA v2
+### CWA v2
 ```c
 void setup() {
   Serial.begin(115200);
