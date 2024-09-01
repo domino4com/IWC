@@ -12,16 +12,40 @@ This is a Weather Sensor measuring Soil Moisture
 | [CWB pin](https://github.com/domino4com/CWB) | N/A |
 
 ## Arduino Code Example
+###Generic, such as CWA v1 and CWV
 ```c
-    int soilmoisture = map(touchRead(T1), 0, 25, 100, 0);
+    int soilmoisture = map(touchRead(T2), 0, 25, 100, 0);
 ```
+###CWA v2
+```c
+void setup() {
+  Serial.begin(115200);
+  delay(1000);
+  Serial.println("\nIWC");
+}
+
+void loop() {
+  touch_value_t h = touchRead(T1);
+  if (h > 3E4) {
+    int p = map(h, 2E4, 23E5, 0, 100);
+    Serial.print(p);
+    Serial.print("%");
+    if (p > 100) Serial.print(" - IWC inserted above the limit line!");
+  } else {
+    Serial.print("No IWC!");
+  }
+  Serial.println();
+  delay(100);
+}
+```
+
 
 ## MicroPython Code Example
 ```Python
 from machine import TouchPad, Pin
 import time
 
-touch_pin = TouchPad(Pin(1, mode=Pin.IN))
+touch_pin = TouchPad(Pin(2, mode=Pin.IN))
 while True:
     touch_value = touch_pin.read()
     print(touch_value)
@@ -31,6 +55,7 @@ while True:
 ### Links
 - [map](https://www.arduino.cc/reference/en/language/functions/math/map/)
 - [touchRead](https://randomnerdtutorials.com/esp32-touch-pins-arduino-ide/)
+- [Espressif][https://docs.espressif.com/projects/arduino-esp32/en/latest/api/touch.html]
 
 # License: 
 <img src="assets/CC-BY-NC-SA.png" width=200 align="right">
