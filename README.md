@@ -1,5 +1,9 @@
 <img src="assets/IWC.svg" width=200 align="right">
 
+[![PlatformIO](https://github.com/domino4com/IWC/actions/workflows/platformio.yml/badge.svg)](https://github.com/domino4com/IWC/actions/workflows/platformio.yml)
+[![Arduino](https://github.com/domino4com/IWC/actions/workflows/arduino.yml/badge.svg)](https://github.com/domino4com/IWC/actions/workflows/arduino.yml)
+
+
 # IWC - Input Weather C - Soil Moisture Sensor
 This is a Weather Sensor measuring Soil Moisture
 | Specifications | |

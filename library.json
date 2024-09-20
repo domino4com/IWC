@@ -1,0 +1,34 @@
+{
+    "name": "IWC",
+    "version": "1.0.0",
+    "description": "IWC: Input Weather C - Soil Moisture sensor",
+    "keywords": "IWC RGB RGBW",
+    "authors": [{
+        "name": "Bjarke Gotfredsen",
+        "url": "https://github.com/gotfredsen",
+        "maintainer": true
+    }],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/domino4com/IWC.git"
+    },
+    "homepage": "https://github.com/domino4com/IWC",
+    "export": {
+        "include": [
+            "LICENSE",
+            "library.json",
+            "library.properties",
+            "README.md",
+            "keywords.txt",
+            "src/*",
+            "examples/*"
+        ]
+    },
+    "frameworks": ["arduino", "espidf"],
+    "platforms": "esp32",
+    "headers": "IWC.h",
+    "dependencies":
+    {
+        "bblanchon/ArduinoJson": "^7.1.0"
+    }
+}
