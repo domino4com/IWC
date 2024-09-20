@@ -24,8 +24,6 @@ void setup() {
 }
 
 void loop() {
-    float soil_moisture;
-
     if (input.getData(var1)) {
         Serial.printf(s, var1);
     } else {

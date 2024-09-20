@@ -1,5 +1,8 @@
 #include "IWC.h"
 #include "driver/touch_sensor.h"
+#ifndef TOUCH_SENSOR
+#define TOUCH_SENSOR T1
+#endif
 
 #define MINIMUM_TOUCH_VALUE 3E4
 #define START_TOUCH_VALUE 2E4
