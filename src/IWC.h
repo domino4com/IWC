@@ -2,7 +2,6 @@
 #define IWC_H
 
 #include <ArduinoJson.h>
-#include <Wire.h>
 
 class IWC {
    public:

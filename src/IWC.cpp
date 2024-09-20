@@ -1,4 +1,5 @@
 #include "IWC.h"
+#include "driver/touch_sensor.h"
 
 #define MINIMUM_TOUCH_VALUE 3E4
 #define START_TOUCH_VALUE 2E4
@@ -13,7 +14,7 @@ bool IWC::begin() {
     return true;
 }
 
-bool IWC::getData(float % humidity) {
+bool IWC::getData(float &humidity) {
     touch_value_t h = touchRead(TOUCH_SENSOR);
     if (h < MINIMUM_TOUCH_VALUE) return false;
     humidity = map(h, START_TOUCH_VALUE, END_TOUCH_VALUE, 0, 100);
